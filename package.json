@@ -6,9 +6,10 @@
   "sideEffects": false,
   "scripts": {
     "build": "npm run build:remix && npm run build:ladle",
-    "build:ladle": "ladle build --stories=app/**/control.stories.{js,jsx,ts,tsx} --out public/ladle --base-url /ladle/",
+    "build:ladle": "ladle build --stories=app/**/*.stories.{js,jsx,ts,tsx} --out public/ladle --base-url /ladle/",
     "build:remix": "remix build",
-    "dev": "remix dev"
+    "dev": "remix dev",
+    "ladle": "ladle serve --stories=app/**/*.stories.{js,jsx,ts,tsx}"
   },
   "dependencies": {
     "@ladle/react": "0.15.1",
